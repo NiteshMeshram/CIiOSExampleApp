@@ -13,7 +13,7 @@ export APP_SCRIPT_PATH="$PWD/scripts/certs/"
 
 
 #APP_NAME : Name of the .app and .ipa file
-export APP_NAME="CiOSExampleApp"
+export APP_NAME="CIiOSExampleApp"
 #APP_WORKSPACE_PATH : Relative path of the .xcworkspace file
 export APP_WORKSPACE_PATH="CIiOSExampleApp.xcworkspace"
 #APP_SCHEME : Name of the xCode scheme. It is assume that all the scheme has the same name.
