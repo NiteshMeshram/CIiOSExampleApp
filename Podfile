@@ -13,8 +13,6 @@ pod 'Bond', '~> 4.3'
 pod 'Alamofire', '~> 3.2'
 pod 'AlecrimCoreData', '~> 4.1'
 
-end
-
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
@@ -24,3 +22,6 @@ post_install do |installer|
         end
     end
 end
+
+end
+
