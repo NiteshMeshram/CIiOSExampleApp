@@ -83,7 +83,7 @@ strip_invalid_archs() {
 }
 
 
-if [[ "$CONFIGURATION" == "Debug" ]]; then
+if [[ "$CONFIGURATION" == "DEV" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlecrimCoreData/AlecrimCoreData.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BXProgressHUD/BXProgressHUD.framework"

@@ -38,6 +38,7 @@
 		55A387A70E07D122140BD477 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		5608CC1A5E471F662E1AD7B7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		71156DB08652CE755182DCC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		995BF59B6D3BEA8F2C8047F7 /* Pods-CIiOSExampleApp.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CIiOSExampleApp.dev.xcconfig"; path = "Pods/Target Support Files/Pods-CIiOSExampleApp/Pods-CIiOSExampleApp.dev.xcconfig"; sourceTree = "<group>"; };
 		AD441DD6C28852B763009A17 /* Pods_CIiOSExampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIiOSExampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AA3D0098D06A663B978FBF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C478EB0AA5D384826AE23B98 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -122,6 +123,7 @@
 			children = (
 				CAF7588BB5FCBE77375B71F5 /* Pods-CIiOSExampleApp.debug.xcconfig */,
 				29A60EC5E2C77255CFFECDE0 /* Pods-CIiOSExampleApp.release.xcconfig */,
+				995BF59B6D3BEA8F2C8047F7 /* Pods-CIiOSExampleApp.dev.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -365,7 +367,7 @@
 		};
 		000516671D896CD1007C7F43 /* DEV */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAF7588BB5FCBE77375B71F5 /* Pods-CIiOSExampleApp.debug.xcconfig */;
+			baseConfigurationReference = 995BF59B6D3BEA8F2C8047F7 /* Pods-CIiOSExampleApp.dev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: V2Solutions, Inc.";
