@@ -84,7 +84,6 @@ if ([ -f "$OUTPUTDIR/$APP_NAME.ipa" ]); then
         curl \
         -F "status=2" \
         -F "notify=0" \
-        -F "notes=$RELEASE_NOTES" \
         -F "notes_type=0" \
         -F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
         -F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
@@ -95,6 +94,6 @@ if ([ -f "$OUTPUTDIR/$APP_NAME.ipa" ]); then
 else
     echo "Failed to Upload Build on Hockeyapp"
 fi
-
+#        -F "notes=$RELEASE_NOTES" \
 
 
