@@ -1,5 +1,5 @@
 #!/bin/sh
-export APP_FULLNAME=CiOSExampleApp
+export APP_FULLNAME=CIiOSExampleApp
 
 #DEVELOPER_NAME : must have the name appeared on the certificate used. Generally this should not be changed.
 export DEVELOPER_NAME="iPhone Distribution: V2Solutions, Inc."
@@ -15,10 +15,10 @@ export APP_SCRIPT_PATH="$PWD/scripts/certs/"
 #APP_NAME : Name of the .app and .ipa file
 export APP_NAME="CiOSExampleApp"
 #APP_WORKSPACE_PATH : Relative path of the .xcworkspace file
-export APP_WORKSPACE_PATH="CiOSExampleApp.xcworkspace"
+export APP_WORKSPACE_PATH="CIiOSExampleApp.xcworkspace"
 #APP_SCHEME : Name of the xCode scheme. It is assume that all the scheme has the same name.
 #             It is automatically suffixed by scheme (DEV/QA/UAT)
-export APP_SCHEME="CiOSExampleApp"
+export APP_SCHEME="CIiOSExampleApp"
 #Settings For Getting Pivotal Notes : Settings For Getting Pivotal Notes
 export INFOPLIST_FILE="./Info.plist"
 export PIVOTAL_PROJECT_ID=1114232
