@@ -33,6 +33,6 @@ on_failure: always
 on_success: always
 script:
 - APP_BUILD_ENV=DEV
-- "if [ \"$TRAVIS_BRANCH\" = \"QA\" ]; then APP_BUILD_ENV=QA; echo \"QA Scheme Selected.\"; elif [ \"$TRAVIS_BRANCH\" = \"master\" ]; then APP_BUILD_ENV=UAT; echo \"UAT Scheme Selected.\"; fi"
+- "if [ \"$TRAVIS_BRANCH\" = \"QA\" ]; then APP_BUILD_ENV=QA; echo \"QA Scheme Selected.\"; elif [ \"$TRAVIS_BRANCH\" = \"master\" ]; then APP_BUILD_ENV=DEV; echo \"UAT Scheme Selected.\"; fi"
 - "xctool -workspace \"$APP_WORKSPACE_PATH\" -scheme \"$APP_SCHEME.$APP_BUILD_ENV\" -sdk iphoneos -configuration \"$APP_BUILD_ENV\" OBJROOT=\"$PWD/build\" SYMROOT=\"$PWD/build\" ONLY_ACTIVE_ARCH=NO"
 - "xctool test -workspace \"$APP_WORKSPACE_PATH\" -scheme \"$APP_SCHEME.$APP_BUILD_ENV\" -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO"
