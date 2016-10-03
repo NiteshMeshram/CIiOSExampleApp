@@ -86,7 +86,6 @@ if ([ -f "$OUTPUTDIR/$APP_NAME.ipa" ]); then
         -F "notify=0" \
         -F "notes_type=0" \
         -F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
-        -F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
         -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
         https://rink.hockeyapp.net/api/2/apps/upload
         echo "Upload finish HockeyApp "
@@ -95,5 +94,5 @@ else
     echo "Failed to Upload Build on Hockeyapp"
 fi
 #        -F "notes=$RELEASE_NOTES" \
-
+#-F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
 
