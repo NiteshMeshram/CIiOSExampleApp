@@ -20,7 +20,7 @@ export APP_WORKSPACE_PATH="CIiOSExampleApp.xcworkspace"
 #             It is automatically suffixed by scheme (DEV/QA/UAT)
 export APP_SCHEME="CIiOSExampleApp"
 #Settings For Getting Pivotal Notes : Settings For Getting Pivotal Notes
-export INFOPLIST_FILE="./Info.plist"
+export INFOPLIST_FILE="CIiOSExampleApp/info.plist"
 export PIVOTAL_PROJECT_ID=1114232
 
 export PIVOTAL_TOKEN='763aa9881c2d64966f6c17be60926221'
