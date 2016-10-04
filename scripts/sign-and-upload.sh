@@ -45,8 +45,10 @@ RELEASE_DATE='date '+%Y-%m-%d %H:%M:%S''
 
 # 'b is label prefix coded as standard prefix for all project'
 if [ ! -z "$INFOPLIST_FILE" ]; then
-LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$INFOPLIST_FILE"`
-echo " $INFOPLIST_FILE => Label ID ="$LABEL_ID
+#LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$INFOPLIST_FILE"`
+#echo " $INFOPLIST_FILE => Label ID ="$LABEL_ID
+LABEL_ID=b`/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" CIiOSExampleApp/info.plist`
+echo $LABEL_ID
 fi
 
 # Only for Feature branch testing, Just replace the feature branch name
