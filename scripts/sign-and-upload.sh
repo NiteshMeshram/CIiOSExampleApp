@@ -41,6 +41,16 @@ echo "***************************"
 # command to package the appliacation and create the .ipa file
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
 
+
+# Condition to check the application's .ipa file is avaialable in build path
+# If the .ipa file is available then zip the app.dysm file
+if ([ -f "$OUTPUTDIR/$APP_NAME.ipa" ]); then
+zip -r -9 "$OUTPUTDIR/$APP_NAME.app.dsym.zip" "$OUTPUTDIR/$APP_NAME.app.dSYM"
+else
+echo "Error : dSYM or IPA is not generated.."
+exit 0
+fi
+
 RELEASE_DATE='date '+%Y-%m-%d %H:%M:%S''
 
 # 'b is label prefix coded as standard prefix for all project'
@@ -87,6 +97,7 @@ if ([ -f "$OUTPUTDIR/$APP_NAME.ipa" ]); then
         -F "status=2" \
         -F "notify=0" \
         -F "notes_type=0" \
+        -F "dsym=@$OUTPUTDIR/$APP_NAME.app.dsym.zip" \
         -F "ipa=@$OUTPUTDIR/$APP_NAME.ipa" \
         -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN" \
         https://rink.hockeyapp.net/api/2/apps/upload
